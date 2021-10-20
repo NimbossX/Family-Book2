@@ -1,0 +1,30 @@
+<html>
+<head>
+ <scripted></scripted>   
+<title>My Family Book</title>
+</head>
+<body>
+  <h1>My Family Book</h1>  
+  <img src="BBC4EA39-CB2C-4D22-9C42-6B397E4DE69D.JPG" style="width:  30%;" id="family_member_image">
+  <h4 id="family_member_name"></h4>
+  <button onclick="update();">Next</button>
+  <script>
+    var names =
+    ["Inder Rai","Gurmeet Gill","Nimrat Rai","Nanki Rai","C.Rai","R.Rai","S.Gill","P.Gill"]
+      var images =
+      ["IMG_2862.jpeg","IMG_1571.jpeg","IMG_1977.jpeg","https://tse1.mm.bing.net/th?id=OIP.WVEv6Qe2gHKa1qk_gzY0UwHaMK&pid=Api&P=0&w=300&h=300","https://s-media-cache-ak0.pinimg.com/originals/e5/ee/d2/e5eed20b823a1f01497f226e260192c2.jpg","https://tse3.mm.bing.net/th?id=OIP.xwHtkAY4UNLfBATsp_WEPgHaEO&pid=Api&P=0&w=300&h=172","https://s-media-cache-ak0.pinimg.com/736x/68/a5/b9/68a5b92ebe8d0cd1c7966c53471652bb.jpg","https://i.pinimg.com/originals/ac/6a/b1/ac6ab1b1e55c6da958584e51aa63881e.jpg"]
+      var i =0
+      function update(){
+        i++
+        var no=8;
+        if (i>no) {
+          i=0
+        }
+        var updateimages=images[i]
+        var updatenames=names[i]
+        document.getElementById("family_member_image").src=updateimages
+        document.getElementById("family_member_name").innerHTML=updatenames
+      }
+  </script>
+</body>
+</html>
